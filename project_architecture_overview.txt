@@ -1,0 +1,11 @@
+প্রজেক্ট আর্কিটেকচার স্ট্রাকচার (Overview)
+
+├── Client Dashboard (User Panel) │ ├── Login / Register (Captcha) │ ├──
+Game Lobby (Categories, Search, Filters) │ ├── Wallet (Deposit,
+Withdraw, Voucher) │ ├── User Profile (VIP, Referral, History, Inbox) │
+└── Multi-language Switcher │ ├── Admin Control Panel (Super Admin) │
+├── User & KYC Management │ ├── Game & API Provider Manager │ ├──
+Payment Gateways & Manual Approvals │ ├── Turnovers, VIP Rates &
+Promotion Controller │ └── Analytics & Profit/Loss Reports │ └── Backend
+Services & APIs ├── Auth & Security Service ├── Game Integration Engine
+├── Payment Logic & Transaction Webhooks └── Notification / Inbox System

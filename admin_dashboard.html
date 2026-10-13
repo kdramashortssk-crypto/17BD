@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Betting Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0b0f19; color: #f8fafc; font-family: 'Segoe UI', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-slate-900 border-r border-slate-800 flex flex-col justify-between hidden md:flex">
+        <div class="p-5">
+            <h1 class="text-xl font-black text-amber-400 tracking-wider">ADMIN <span class="text-white">PANEL</span></h1>
+            <nav class="mt-8 space-y-2 text-sm">
+                <a href="#" class="flex items-center space-x-3 bg-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-xl"><i class="fa-solid fa-chart-pie"></i><span>ড্যাশবোর্ড</span></a>
+                <a href="#" class="flex items-center space-x-3 text-slate-400 hover:text-white px-4 py-2.5 rounded-xl"><i class="fa-solid fa-users"></i><span>ইউজার ম্যানেজমেন্ট</span></a>
+                <a href="#" class="flex items-center space-x-3 text-slate-400 hover:text-white px-4 py-2.5 rounded-xl"><i class="fa-solid fa-wallet"></i><span>ডিপোজিট ও উইথড্র</span></a>
+                <a href="#" class="flex items-center space-x-3 text-slate-400 hover:text-white px-4 py-2.5 rounded-xl"><i class="fa-solid fa-gamepad"></i><span>গেম এপিআই কন্ট্রোল</span></a>
+                <a href="#" class="flex items-center space-x-3 text-slate-400 hover:text-white px-4 py-2.5 rounded-xl"><i class="fa-solid fa-gear"></i><span>সেটিংস</span></a>
+            </nav>
+        </div>
+        <div class="p-4 border-t border-slate-800">
+            <button onclick="alert('Logged out')" class="w-full bg-red-500/20 text-red-400 hover:bg-red-500 hover:text-white text-sm font-semibold py-2 rounded-xl transition"><i class="fa-solid fa-right-from-bracket mr-2"></i>লগআউট</button>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col overflow-y-auto">
+        <!-- Top Header -->
+        <header class="bg-slate-900 border-b border-slate-800 px-6 py-4 flex justify-between items-center">
+            <h2 class="text-lg font-bold text-slate-200">সিস্টেম ওভারভিউ</h2>
+            <div class="flex items-center space-x-3">
+                <span class="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/30 font-semibold"><i class="fa-solid fa-circle text-[8px] mr-1"></i> লাইভ সার্ভার</span>
+            </div>
+        </header>
+
+        <!-- Dashboard Stats -->
+        <div class="p-6 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass p-5 rounded-2xl border border-slate-800">
+                    <p class="text-xs text-slate-400 font-medium">মোট ইউজার</p>
+                    <h3 class="text-2xl font-black text-white mt-1">১২,৪৫০</h3>
+                </div>
+                <div class="glass p-5 rounded-2xl border border-slate-800">
+                    <p class="text-xs text-slate-400 font-medium">আজকের ডিপোজিট</p>
+                    <h3 class="text-2xl font-black text-emerald-400 mt-1">৳ ৪,৫০,০০০</h3>
+                </div>
+                <div class="glass p-5 rounded-2xl border border-slate-800">
+                    <p class="text-xs text-slate-400 font-medium">আজকের উইথড্র</p>
+                    <h3 class="text-2xl font-black text-rose-400 mt-1">৳ ২,৮০,০০০</h3>
+                </div>
+                <div class="glass p-5 rounded-2xl border border-slate-800">
+                    <p class="text-xs text-slate-400 font-medium">মোট প্ল্যাটফর্ম প্রফিট</p>
+                    <h3 class="text-2xl font-black text-amber-400 mt-1">৳ ১,৭০,০০০</h3>
+                </div>
+            </div>
+
+            <!-- Recent Transactions Table -->
+            <div class="glass rounded-2xl border border-slate-800 overflow-hidden">
+                <div class="p-4 border-b border-slate-800 font-bold text-sm text-slate-300">পেন্ডিং ডিপোজিট রিকোয়েস্ট</div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-slate-800/50 text-slate-400">
+                            <tr>
+                                <th class="p-3">ইউজার আইডি</th>
+                                <th class="p-3">পরিমাণ</th>
+                                <th class="p-3">মেথড</th>
+                                <th class="p-3">ট্রানজেকশন আইডি</th>
+                                <th class="p-3 text-center">অ্যাকশন</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60">
+                            <tr>
+                                <td class="p-3 font-semibold text-slate-200">User #1049</td>
+                                <td class="p-3 text-emerald-400 font-bold">৳ ৫,০০০</td>
+                                <td class="p-3">bKash (Auto)</td>
+                                <td class="p-3 font-mono text-slate-400">TRX89324792</td>
+                                <td class="p-3 text-center space-x-2">
+                                    <button onclick="approveTx(1)" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-3 py-1 rounded">অ্যাপ্রুভ</button>
+                                    <button onclick="rejectTx(1)" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-3 py-1 rounded">বাতিল</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function approveTx(id) { alert(`ট্রানজেকশন #${id} সফলভাবে অ্যাপ্রুভ করা হয়েছে!`); }
+        function rejectTx(id) { alert(`ট্রানজেকশন #${id} বাতিল করা হয়েছে!`); }
+    </script>
+</body>
+</html>
